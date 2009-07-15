@@ -19,7 +19,6 @@ jQuery.fn.animateStrikethrough = function(speed, callback){
     
     var strike  = jQuery(this).find('.strike');
     var left    = jQuery(this).find('.letters-left');
-    // alert('strike = ' + $(this).find('.letters-left').text())
     
     jQuery(strike).transposeFirstLetter(left);
     jQuery(left).removeFirstLetter();
