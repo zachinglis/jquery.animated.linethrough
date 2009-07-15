@@ -1,0 +1,30 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  padding: 100px;
+}
+
+#subtitle {
+  color: #C7C7C7;
+}
+
+.example {
+  font-size: 12px;
+}
+
+form {
+  padding: 30px;
+}
+
+.meta {
+  margin-top: 13px;
+  font-size: 12px;
+}
+
+#debug {
+  color: #ccc;
+  font-size: 12px;
+  font-style: italic;
+  position: absolute;
+  top: 10px;
+  left:  10px;
+}
