@@ -1,8 +1,8 @@
 jQuery(document).ready(function () {  
   jQuery('#line').animateStrikethrough(40, function () {
-    alert("Completed");
+    jQuery('#debug').append("<p>Completed</p>");
   });
 
   // Debug code
-  jQuery('#debug').text("Javascript loaded");
+  jQuery('#debug').append("<p>Javascript loaded</p>");
 });
