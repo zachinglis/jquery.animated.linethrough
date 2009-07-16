@@ -1,11 +1,4 @@
-jQuery(document).ready(function () {
-  jQuery('#line').animateStrikethrough(40);
-
-  // Debug code
-  jQuery('#debug').text("Javascript loaded");
-});
-
-jQuery.fn.animateStrikethrough = function(speed){
+jQuery.fn.animateStrikethrough = function(speed, callback){
   return this.each(function(){
     if(jQuery(this).find('.strike').length == 0) {
       jQuery(this).wrapInner("<span class='letters-left'></span>");
@@ -16,9 +9,12 @@ jQuery.fn.animateStrikethrough = function(speed){
     var strike  = jQuery(line).find('.strike');
     var left    = jQuery(line).find('.letters-left');
 
-    setInterval(function () {
+    strikethrough = setInterval(function () {
       jQuery(line).strikeThroughFirstLetter();
-      
+      if(jQuery(this).find('.letters-left').length == 0 && typeof callback == "function") {
+        callback();
+        clearInterval(strikethrough);
+      }
     }, speed);
   });
 };
@@ -32,6 +28,7 @@ jQuery.fn.strikeThroughFirstLetter = function(){
       jQuery(this).addClass('strike');
       jQuery(this).text(jQuery(this).find('.strike').text());
       jQuery(this).find('.strike, .letters-left').remove();
+      strikethrough_finished = true;
     }
   });
 };
