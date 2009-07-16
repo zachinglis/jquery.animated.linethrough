@@ -20,6 +20,31 @@ form {
   font-size: 12px;
 }
 
+#controls {
+  margin-top: 25px;
+  font-size: 12px;
+}
+
+  #controls label {
+    float: left;
+    display: block;
+    font-weight: bold;
+    padding: 4px;
+    padding-left: 0;
+  }
+  
+  #controls a {
+    background: #fbf0f6;
+    color: #b60000;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 4px;
+    padding-left:  8px;
+    padding-right: 8px;
+    margin-left:   8px;
+    margin-right:  8px;
+  }
+
 #debug {
   color: #ccc;
   font-size: 12px;
